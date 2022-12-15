@@ -1,0 +1,298 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft orange: hsl(35, 77%, 62%)
+- Soft red: hsl(5, 85%, 63%)
+
+### Neutral
+
+Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font 
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700, 800*/
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin:20px 100px;
+    padding: 0;
+    font-family: 'Inter',sans-serif;
+}
+#overlay{
+    width: 70%;
+    height: 250%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    display: none;
+}
+nav >ul, .links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3em;
+    padding: 0;
+}
+
+
+nav ul > li:first-child{
+    margin-right: auto;
+}
+
+nav ul .links> li:nth-child(1){
+    display: none;
+}
+
+nav ul > li:last-child{
+    display: none;
+}
+
+li,a{
+    text-decoration: none;
+    list-style: none;
+}
+
+nav ul li > a{
+    color: hsl(236, 13%, 42%);
+}
+
+
+nav ul li > a:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+main{
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+.image{
+    background-image: url(./assets/images/image-web-3-desktop.jpg);
+    background-size: cover;
+    width: 65%;
+    height: 300px;
+    grid-column: 1/span2;
+    grid-row: 1;
+}
+
+.line{
+    background-color:hsl(36, 100%, 99%);
+    width: 100%;
+    height: 1px;
+}
+.New-items{
+    background-color: hsl(240, 100%, 5%);
+    grid-column: 3;
+    grid-row: 1/span2;
+    padding: 20px;
+}
+
+.New-items >h1{
+    color: hsl(35, 77%, 62%);
+}
+
+.New-items>h3{
+    color: white;
+    font-weight: 800;
+}
+
+.New-items>p{
+    color: hsl(233, 8%, 79%);
+    font-size: 15px;
+}
+
+main>header{
+    margin-top: 10px;
+    font-size: 3em;
+    font-weight: 800;
+    width: 70%;
+    color: hsl(240, 100%, 5%);
+}
+
+.Read-more{
+    margin-top: 10px;
+    padding-right: 30px;
+}
+
+.Read-more > span{
+    font-size: 15px;
+}
+
+button{
+    margin-top: 25px;
+    border: none;
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 15px 35px;
+    letter-spacing: 3px;
+    font-family: 'Inter',sans-serif;
+    cursor: pointer;
+}
+
+footer{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    gap: 3em;
+}
+
+.footer-item-el{
+    /* display: grid;
+    justify-content: end;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.7em;
+}
+
+.footer-item-el>span{
+    font-size: 1.25em;
+    font-weight: 800;
+    color: hsl(233, 8%, 79%);
+}
+
+.footer-item-el>li:nth-child(2){
+    font-weight: 800;
+    color: hsl(240, 100%, 5%);
+}
+
+.footer-item>img{
+    width: 80px;
+}
+
+.footer-item{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.attribution { 
+    margin-top: 30px;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@media screen and (max-width:845px) {
+    body{
+        margin: 10px;
+    }
+
+    nav ul > li:last-child{
+        display: block;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    main >img{
+        width: 65%;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .New-items{
+        margin-top: 50px;
+        background-color: hsl(240, 100%, 5%);
+        grid-column: 1;
+        grid-row: 4;
+        padding: 20px;
+    }
+
+    nav ul > li:first-child{
+        margin-right: auto;
+    }
+
+    footer{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .image{
+        width: 100%;
+        background-image: url(./assets/images/image-web-3-mobile.jpg);
+    }
+
+    main>header{
+        font-size: 2.5em;
+        width: 100%;
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .Read-more{
+        margin-top: 10px;
+        padding-right: 30px;
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    nav ul .links> li:nth-child(1){
+        display: block;
+        margin-left: auto;
+    } 
+    
+    nav ul>.links{
+        padding: 20px;
+        top: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: hsl(36, 100%, 99%);
+        position: absolute;
+        width: 70%;
+        height: 250%;
+        right: 0;
+        display: none;
+    }
+
+    #overlay{
+        display: none;
+    }
+}
